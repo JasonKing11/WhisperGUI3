@@ -1,0 +1,16 @@
+import schedule
+import time
+from src.api_client import APIClient
+
+def fetch_data():
+    # 配置API客户端
+    client = APIClient(base_url="https://api.example.com", api_key="your_api_key")
+    response = client.send_request(endpoint="data", method="GET")
+    print(response)
+
+# 定时任务每小时执行一次
+schedule.every(1).hours.do(fetch_data)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
