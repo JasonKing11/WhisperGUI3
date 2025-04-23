@@ -13,4 +13,3 @@ API interaction automation
 1. 克隆项目：
    ```bash
    git clone https://github.com/yourusername/api-automation-tool.git
-pytest tests/test_api.py
